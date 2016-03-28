@@ -1,5 +1,5 @@
-Name:           python3-raven
-Version:        5.10.2
+Name:           python-raven
+Version:        5.11.2
 Release:        1
 Summary:        Python client for Sentry
 Group:          Development/Python
@@ -8,8 +8,8 @@ URL:            https://pypi.python.org/pypi/raven/
 Source0:        http://pypi.python.org/packages/source/r/raven/raven-%{version}.tar.gz
 Patch0:         raven-use-system-cacert.patch
 BuildArch:      noarch
-BuildRequires:  python3-devel
-BuildRequires:  python3-setuptools
+BuildRequires:  python-devel
+BuildRequires:  python-setuptools
 
 %description
 Raven is a Python client for Sentry <http://getsentry.com>. It provides full
@@ -25,10 +25,10 @@ rm raven/data/cacert.pem
 rmdir raven/data
 
 %build
-python3 setup.py build
+python setup.py build
 
 %install
-python3 setup.py install --skip-build --root=%{buildroot}
+python setup.py install --skip-build --root=%{buildroot}
 
 %check
 #Disable check for now because of missing dependency pytest-timeout
@@ -37,5 +37,5 @@ python3 setup.py install --skip-build --root=%{buildroot}
 %files
 %doc README.rst LICENSE
 %{_bindir}/raven
-%{py3_puresitedir}/*
+%{py_puresitedir}/*
 

@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   raven-5.10.2.tar.gz: 46e938033248b5afa3440c8e921a334ca7e8a9a7
+sources:
+  raven-5.11.2.tar.gz: 4e334466a090fc7fa17e0613790dee310a28c798
